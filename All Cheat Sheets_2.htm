@@ -1,0 +1,62 @@
+
+<div class="select-menu-header">
+  <span class="select-menu-title">Switch branches/tags</span>
+  <button class="hx_rsm-close-button btn-link close-button" type="button" data-toggle-for="branch-select-menu"><svg aria-label="Close menu" class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" role="img"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg></button>
+</div>
+
+<tab-container class="js-branches-tags-tabs">
+  <div class="select-menu-filters">
+    <filter-input class="select-menu-text-filter" aria-owns="ref-list-branches" data-controls-ref-menu-id="ref-list-branches">
+      <input
+        type="text"
+        id="context-commitish-filter-field"
+        class="form-control"
+        autofocus
+        autocomplete="off"
+        aria-label="Filter branches/tags"
+        placeholder="Filter branches/tags">
+    </filter-input>
+
+    <remote-input class="select-menu-text-filter"
+      src="/Krithi07/cheatsheets-ai/refs-tags/master/All%20Cheat%20Sheets.pdf?source_action=show&amp;source_controller=blob&amp;tag_name=master"
+      aria-owns="tags-menu"
+      data-controls-ref-menu-id="tags-menu"
+      hidden>
+      <input type="text" class="form-control" aria-label="Find a tag" placeholder="Find a tag" autofocus>
+    </remote-input>
+
+    <div class="select-menu-tabs" role="tablist">
+      <ul>
+        <li class="select-menu-tab">
+          <button type="button" class="select-menu-tab-nav" data-filter-placeholder="Filter branches/tags" role="tab" aria-selected="true">Branches</button>
+        </li>
+
+        <li class="select-menu-tab">
+          <button type="button" class="select-menu-tab-nav" data-filter-placeholder="Find a tag" role="tab">Tags</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="select-menu-list" role="tabpanel" id="ref-list-branches">
+    <div data-filter-list>
+
+        <a class="select-menu-item"
+           href="https://github.com/Krithi07/cheatsheets-ai/blob/master/All%20Cheat%20Sheets.pdf"
+           role="menuitemradio"
+           aria-checked="true"
+           rel="nofollow">
+          <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+            <span class="d-flex">
+              <span class="select-menu-item-text flex-auto break-word" data-menu-button-text data-filter-item-text>master</span>
+              <span class="Label Label--gray flex-self-start">default</span>
+            </span>
+        </a>
+        <div class="p-2" data-filter-empty-state hidden>Nothing to show</div>
+    </div>
+  </div>
+
+  <div class="select-menu-list" role="tabpanel" id="tags-menu" hidden>
+    <div class="p-2">Search for a tag</div>
+  </div>
+</tab-container>
